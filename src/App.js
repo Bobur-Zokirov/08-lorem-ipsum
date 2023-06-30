@@ -7,13 +7,13 @@ function App() {
 
   const getText = (e) => {
     e.preventDefault();
-    let amount = parseInt(count);
     if (amount < 0) {
       setCount(1);
     }
     if (amount > 8) {
       setCount(8);
     }
+    let amount = parseInt(count);
     setText(data.slice(0, amount));
   };
 
@@ -27,8 +27,6 @@ function App() {
           className=""
           placeholder="0"
           value={count}
-          min={0}
-          max={8}
           name="count"
           id="count"
           onChange={(e) => setCount(e.target.value)}
